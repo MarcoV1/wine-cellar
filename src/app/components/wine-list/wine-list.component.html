@@ -1,0 +1,27 @@
+<div>
+  <div class="center-header">
+  <h1>Wine List</h1>
+  <button routerLink="/add">Add new Wine</button>
+  </div>
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of wineDataHandlerService.wineList$ | async">
+      <th>{{ item.id }}</th>
+      <td>{{ item.name }}</td>
+      <td>
+        <button type="button" (click)="onViewButtonClicked(item)">View</button>
+        <button type="button" (click)="onUpdateButtonClicked(item)">Update</button>
+        <button type="button" (click)="onDeleteButtonClicked(item)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>

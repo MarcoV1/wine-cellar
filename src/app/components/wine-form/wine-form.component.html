@@ -1,0 +1,49 @@
+<form class="register-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Name *</label>
+      <input
+        type="text"
+        formControlName="name"
+        class="form-input"/>
+      <div *ngIf="submitted && f['name'].errors" class="invalid-input">
+        <span *ngIf="f['name'].errors['required']">Name is required</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Year</label>
+      <input
+        type="number"
+        formControlName="year"
+        class="form-input"/>
+    </div>
+
+    <div class="form-group">
+      <label>Vineyard</label>
+      <input
+        type="text"
+        formControlName="vineyard"
+        class="form-input"/>
+    </div>
+
+    <div class="form-group">
+      <label>Image url</label>
+      <input
+        type="text"
+        formControlName="image"
+        class="form-input"/>
+    </div>
+
+  <div>
+    <button routerLink="/list">Go back</button>
+  </div>
+
+  <div class="form-actions">
+      <button type="submit">{{ addingNewWine ? "Add" : "Update" }}</button>
+      <button
+        type="button"
+        (click)="onReset()">
+        Reset
+      </button>
+    </div>
+  </form>

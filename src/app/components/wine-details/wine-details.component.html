@@ -1,0 +1,13 @@
+<div class="center-card">
+  <ng-container *ngIf="wineDetail$ | async as wine">
+    <div class="card">
+      <div class="image-card">
+        <img src="{{ wine?.image}}" class="wine-image">
+      </div>
+      <h2 class="wine-title"> {{ wine.name }} </h2>
+      <p> {{ wine.vineyard }} - {{ wine.year }} </p>
+    </div>
+  </ng-container>
+</div>
+
+<button routerLink="/list">Go back</button>

@@ -1,0 +1,34 @@
+.form-input {
+  box-sizing: border-box;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 2px solid hsl(0, 0%, 90%);
+}
+
+.invalid-input {
+  color: red;
+}
+
+.register-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+
+.form-group {
+  display: grid;
+  align-content: flex-start;
+
+  label {
+    margin: 6px;
+    font-weight: bold;
+  }
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  button {
+    width: 4rem;
+  }
+}

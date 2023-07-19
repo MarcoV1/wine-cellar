@@ -1,0 +1,28 @@
+button {
+  background-color: #0A66C2;
+  border: 0;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 0.5rem;
+  text-align: center;
+  max-height: 2rem;
+  margin: 2px;
+}
+
+button:hover,
+button:focus {
+  background-color: #16437E;
+  color: #ffffff;
+}
+
+.center-header {
+  display: flex;
+  justify-content: space-between;
+  align-content: end;
+  align-items: end;
+  margin-bottom: 6px;
+}
